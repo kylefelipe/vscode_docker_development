@@ -43,14 +43,14 @@ Em seguida é criado um contêiner e só então o ambiente do VSCode é instalad
 
 Algumas configurações que podem ser colocadas no arquivo `.devcontainer.json`.
 
-* `"customizations"`: É um objeto, recebe algumas customizações a serem aplicadas.
-* `"vscode"`: Vai dentro de `"customizations"` recebe as configurações a serem usadas pelo VSCode.
-* `"extensions'`: Vai dentro de `"customitions"`, recebe uma lista dos IDs de plugins a serem instalados no container quando criado.
-* `"fowardPorts"`: Lista de portas do containers que serão expostas do container.
-* `"postCreateCommand"`: Comandos a serem executados que serão executados depois que o container for criado, em formado de String. Ex.: `"npm install --production"`.
-* `"remoteUser"`: É o nome de usuário que o VS Code irá utilizar dentro do container.
-* `"service"`: Nome do serviço onde o VSCode deve contectar quando rodar.
-* `"features"`: Aqui é possível passar um objeto contendo as features e as versões a serem adicionadas no container. [Clique aqui](https://code.visualstudio.com/docs/remote/containers#_dev-container-features-preview).
+- `"customizations"`: É um objeto, recebe algumas customizações a serem aplicadas.
+- `"vscode"`: Vai dentro de `"customizations"` recebe as configurações a serem usadas pelo VSCode.
+- `"extensions'`: Vai dentro de `"customitions"`, recebe uma lista dos IDs de plugins a serem instalados no container quando criado.
+- `"fowardPorts"`: Lista de portas do containers que serão expostas do container.
+- `"postCreateCommand"`: Comandos a serem executados que serão executados depois que o container for criado, em formado de String. Ex.: `"npm install --production"`.
+- `"remoteUser"`: É o nome de usuário que o VS Code irá utilizar dentro do container.
+- `"service"`: Nome do serviço onde o VSCode deve contectar quando rodar.
+- `"features"`: Aqui é possível passar um objeto contendo as features e as versões a serem adicionadas no container. [Clique aqui](https://code.visualstudio.com/docs/remote/containers#_dev-container-features-preview).
 
 Documentação completa do [`devcontainer.json`](https://code.visualstudio.com/docs/remote/devcontainerjson-reference)
 
@@ -114,6 +114,15 @@ O VSCode vai comparar os plugins instalados e vai indicar quais plugins que est�
 
 ![Plugins no VSCode](./tutorial_imgs/plugins_vscode.png)
 
-# Caso de uso
+## Caso de uso
 
-## Abrir pasta 
+### Abrir pasta
+
+Para abrir uma pasta dentro de um Docker, é necessário que a pasta já contenha um Dockerfile ou docker-compose.
+
+Para isso podemos clicar na barra de status, lado eesquerdo na parter de baixo da tela (1), ou abrir a paleta de comandos (`CTRL + SHIFT + p`) e escolher a opção `Remote-Containers: Open folder in container` (2)
+
+![Abrindo uma pasta](./tutorial_imgs/abrindo_pasta_container_0001.png)
+
+Na tela que abrir, podemos navegar até a pasta que contém os arquivos do Docker e abrir
+Caso seja a primeira vez o vscode iraá perguntar qual a aplicação deseja abrir (caso seja um docker compose)
