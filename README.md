@@ -113,3 +113,7 @@ Alguns plugins precisam estar instalados localmente, dentro do container. Para i
 O VSCode vai comparar os plugins instalados e vai indicar quais plugins que estão fora do container devem ser instalados dentro do container e oferecer a opção de instalar o plugin no contaner.
 
 ![Plugins no VSCode](./tutorial_imgs/plugins_vscode.png)
+
+# Caso de uso
+
+## Abrir pasta 
